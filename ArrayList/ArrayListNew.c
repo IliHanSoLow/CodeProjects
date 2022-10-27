@@ -8,34 +8,6 @@ int * queue;
 int count = 0;
 int queuelength = 10;
 
-int main()
-{
-    printf("QueueLength: %i\n", queuelength);
-    queue=(int *)malloc(10*sizeof(int));
-    push(1);
-    push(2);
-    push(3);
-    push(4);
-    push(5);
-    push(5);
-    push(6);
-    push(7);
-    push(8);
-    push(9);
-    push(10);
-    push(11);
-    push(12);
-    push(13);
-
-    printList();
-
-    pop();
-
-    printList();
-
-    return 0;
-}
-
 void printList()
 {
     printf("List: ");
@@ -78,4 +50,32 @@ int pop()
     }
     count--;
     return tmp;
+}
+
+int main()
+{
+    printf("QueueLength: %i\n", queuelength);
+    queue=(int *)malloc(10*sizeof(int));
+    push(1);
+    push(2);
+    push(3);
+    push(4);
+    push(5);
+    push(5);
+    push(6);
+    push(7);
+    push(8);
+    push(9);
+    push(10);
+    push(11);
+    push(12);
+    push(13);
+
+    printList();
+
+    pop();
+
+    printList();
+
+    return 0;
 }

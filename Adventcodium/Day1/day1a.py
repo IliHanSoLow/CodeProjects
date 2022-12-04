@@ -1,9 +1,9 @@
 import numpy as np
 list = np.array([])
 b = np.array([])
-with open(r"C:\Users\Kind_\Desktop\ProgrammingProjects\Adventcodium\Day1\input.txt") as inp:
+with open(r"c:\users\kind_\desktop\programmingprojects\adventcodium\day1\input.txt") as inp:
   inplen = sum(1 for line in inp)
-with open(r"C:\Users\Kind_\Desktop\ProgrammingProjects\Adventcodium\Day1\input.txt") as inp:
+with open(r"c:\users\kind_\desktop\programmingprojects\adventcodium\day1\input.txt") as inp:
   i = 0
   while i <= inplen:
     i = i+1
@@ -16,5 +16,5 @@ with open(r"C:\Users\Kind_\Desktop\ProgrammingProjects\Adventcodium\Day1\input.t
       b = []
       continue
     b = np.concatenate((b, [int(a)]))
-print("list:", list)
 print("max:", max(list))
+print("list:", list)

@@ -1,4 +1,4 @@
-# infile = r'C:\Users\Kind_\Desktop\ProgrammingProjects\Adventcodium\Day4\input.txt'
+infile = r'C:\Users\Kind_\Desktop\ProgrammingProjects\Adventcodium\Day4\input.txt'
 data = open(infile).read().strip()
 lines = [x.strip() for x in data.split('\n')]
 p1 = 0

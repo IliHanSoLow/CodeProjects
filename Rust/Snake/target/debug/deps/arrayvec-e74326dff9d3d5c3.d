@@ -1,0 +1,12 @@
+C:\Users\Kind_\Desktop\ProgrammingProjects\Rust\Snake\target\debug\deps\arrayvec-e74326dff9d3d5c3.rmeta: C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs
+
+C:\Users\Kind_\Desktop\ProgrammingProjects\Rust\Snake\target\debug\deps\libarrayvec-e74326dff9d3d5c3.rlib: C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs
+
+C:\Users\Kind_\Desktop\ProgrammingProjects\Rust\Snake\target\debug\deps\arrayvec-e74326dff9d3d5c3.d: C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs
+
+C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\lib.rs:
+C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\maybe_uninit.rs:
+C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array.rs:
+C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\array_string.rs:
+C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\char.rs:
+C:\Users\Kind_\.cargo\registry\src\github.com-1ecc6299db9ec823\arrayvec-0.5.2\src\errors.rs:

@@ -1,16 +1,12 @@
-pub mod player;
 pub mod card;
-pub mod stack;
 pub mod game;
+pub mod player;
+pub mod stack;
 
-use stack::*;
 use game::*;
+use stack::*;
 
 fn main() {
     let mut game = Game::new();
     game.pregame();
-    let mut stack: Stack = Stack::new();
-    stack.print();
-    stack.shuffle();
-    stack.print();
 }

@@ -1,0 +1,8 @@
+Lang: alles
+kurz: kein 7,8
+
+Sauspiel
+    Trumpf:
+        Herz, alle Unter und Ober
+    Blatt, Schell, Eichel
+    min 1 Karte der Farbe 

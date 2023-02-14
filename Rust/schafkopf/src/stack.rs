@@ -4,12 +4,14 @@ use rand::thread_rng;
 use crate::card::*;
 
 pub struct Stack {
-    cstack: Vec<Card>
+    cstack: Vec<Card>,
 }
 
 impl Stack {
-    pub fn new() -> Stack{
-        Stack{ cstack : Stack::import_all_cards() }
+    pub fn new() -> Stack {
+        Stack {
+            cstack: Stack::import_all_cards(),
+        }
     }
 
     fn import_all_cards() -> Vec<Card> {
@@ -31,20 +33,23 @@ impl Stack {
         tmp
     }
 
-    pub fn shuffle(& mut self) {
+    pub fn shuffle(&mut self) {
         self.cstack.shuffle(&mut thread_rng());
         println!("shuffled");
         println!();
     }
 
     pub fn print(&self) {
-        for i in &self.cstack{
+        for i in &self.cstack {
             i.print();
         }
         println!();
     }
 
-    pub fn check_trumpf(&self){
-        
+    pub fn check_trumpf(&mut self) {
+        for i in self.cstack.clone() {}
+    }
+    pub fn pop(&mut self) -> Card{
+        self.cstack.pop().expect("keine Karten mehr auf dem Stapel")
     }
 }

@@ -1,12 +1,17 @@
+#[derive(Clone, Copy)]
 pub struct Card {
     farbe: Farbe,
     typ: Typ,
-    trumpf: bool
+    trumpf: bool,
 }
 
 impl Card {
     pub fn new(farbe: Farbe, typ: Typ) -> Card {
-        Card { farbe, typ, trumpf: false }
+        Card {
+            farbe,
+            typ,
+            trumpf: false,
+        }
     }
     fn get_farbe(&self) -> &Farbe {
         &self.farbe
@@ -33,6 +38,16 @@ impl Card {
             Typ::Sieben => sfarbe.1 = String::from("Sieben"),
         }
         println!("{} {}; ", sfarbe.0, sfarbe.1)
+    }
+    pub fn is_trumpf(&mut self) {
+        match &self.farbe {
+            Farbe::Herz => self.trumpf = true,
+            _ => self.trumpf = false,
+        }
+        match &self.typ {
+            Typ::Unter | Typ::Ober => self.trumpf = true,
+            _ => self.trumpf = false,
+        }
     }
 }
 

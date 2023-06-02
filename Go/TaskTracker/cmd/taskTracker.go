@@ -9,15 +9,12 @@ import (
 	"time"
 )
 
-// !!! FEHLER WAHRSCHEINLICH BEI LESEN ODER SCHREIBEN ZU BINARY
-// ? Hoffentlich funktioniert das so
-
 var currentUser user
 
 func InitUser(name string) {
 	storeArray(currentUser.List, currentUser.Name)
+	storeUsername(name)
 	if _, err := os.Stat("taskTracer/" + name); os.IsNotExist(err) {
-		storeArray(nil, name)
 		currentUser = user{name, []item{}}
 		currentUser.List = readArray(name)
 		return
@@ -25,6 +22,10 @@ func InitUser(name string) {
 	currentUser = user{name, []item{}}
 	currentUser.List = readArray(name)
 	currentUser.List = readArray(name)
+}
+
+func WriteCurrentArray() {
+	storeArray(currentUser.List, currentUser.Name)
 }
 
 func newTask(title string, priority int, description string) {
@@ -186,7 +187,7 @@ func partitionCompletion(arr []item, low, high int) ([]item, int) {
 }
 
 func storeArray(arr []item, userName string) {
-	p := "taskTracer/" + userName + "/array.dat"
+	p := "taskTracker/" + userName + "/array.dat"
 	// Open the file for writing
 	if err := os.MkdirAll(filepath.Dir(p), 0770); err != nil {
 		fmt.Println("ERROR FILPATH COULD NOT BE CREATED")
@@ -214,7 +215,7 @@ func storeArray(arr []item, userName string) {
 
 func readArray(userName string) (arr []item) {
 	// Open the file for reading
-	file, err := os.Open("taskTracer/" + userName + "/array.dat")
+	file, err := os.Open("taskTracker/" + userName + "/array.dat")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
@@ -228,6 +229,54 @@ func readArray(userName string) (arr []item) {
 	err = decoder.Decode(&arr)
 	if err != nil {
 		fmt.Println("Error decoding array:", err)
+		return
+	}
+
+	// fmt.Println("Array read from 'array.dat':", arr)
+	return
+}
+
+func storeUsername(userName string) {
+	p := "lastUser.dat"
+	// Open the file for writing
+	if err := os.MkdirAll(filepath.Dir(p), 0770); err != nil {
+		fmt.Println("ERROR FILPATH COULD NOT BE CREATED")
+		return
+	}
+	file, err := os.Create(p)
+	if err != nil {
+		fmt.Println("Error creating file:", err)
+		return
+	}
+	defer file.Close()
+
+	// Create an encoder
+	encoder := gob.NewEncoder(file)
+
+	// Encode and write the array to the file
+	err = encoder.Encode(userName)
+	if err != nil {
+		fmt.Println("Error encoding User:", err)
+		return
+	}
+
+	// fmt.Println("Array has been stored in 'array.dat'")
+}
+
+func ReadUser() (username string) {
+	// Open the file for reading
+	file, err := os.Open("lastUser.dat")
+	if err != nil {
+		return
+	}
+	defer file.Close()
+
+	// Create a decoder
+	decoder := gob.NewDecoder(file)
+
+	// Decode the array from the file
+	err = decoder.Decode(&username)
+	if err != nil {
 		return
 	}
 

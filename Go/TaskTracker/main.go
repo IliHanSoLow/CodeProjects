@@ -1,6 +1,8 @@
 package main
 
-import "github.com/spf13/cobra-cli/cmd"
+import (
+	"taskTracker/cmd"
+)
 
 func main() {
 	// InitUser("Ilian")
@@ -18,5 +20,7 @@ func main() {
 	storeArray(currentUser.List, currentUser.Name)
 	currentUser.List = readArray(currentUser.Name)
 	printTasks() */
+	cmd.InitUser(cmd.ReadUser())
 	cmd.Execute()
+	cmd.WriteCurrentArray()
 }

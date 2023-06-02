@@ -4,7 +4,7 @@ void push();
 int pop();
 void printList();
 
-int * queue;
+int *queue;
 int count = 0;
 int queuelength = 10;
 
@@ -22,8 +22,8 @@ void push(int a)
 {
     if (count >= queuelength)
     {
-        queue=(int *)realloc(queue, (10+queuelength)*sizeof(int));
-        queuelength+=10;
+        queue = (int *)realloc(queue, (10 + queuelength) * sizeof(int));
+        queuelength += 10;
     }
 
     if (count < 0)
@@ -39,7 +39,7 @@ int pop()
 {
     if (count < 0)
     {
-        return;
+        return 0;
     }
 
     int tmp;
@@ -55,7 +55,7 @@ int pop()
 int main()
 {
     printf("QueueLength: %i\n", queuelength);
-    queue=(int *)malloc(10*sizeof(int));
+    queue = (int *)malloc(10 * sizeof(int));
     push(1);
     push(2);
     push(3);

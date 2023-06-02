@@ -1,4 +1,4 @@
-use crate::player::{Player, self};
+use crate::player::{self, Player};
 use crate::stack::Stack;
 use std::arch::x86_64::_mm_insert_epi32;
 use std::io;
@@ -9,7 +9,7 @@ pub struct Game {
     player3: Player,
     player4: Player,
     thisplayer: i32,
-    cstack: Stack
+    cstack: Stack,
 }
 
 impl Game {
@@ -43,17 +43,15 @@ impl Game {
         println!("Suche dir die Spielart aus:");
         println!("1. Sauspiel");
         println!("2. todo!()");
-        loop{
-        io::stdin().read_line(inp).expect("Failed to get input")
+        io::stdin().read_line(inp).expect("Failed to get input");
         match inp {
             "1" => sauspiel(),
             "2" => todo!(),
-            _ => jump!()
+            _ => jump!(),
         }
     }
 
-
-    fn get_cards(&mut self){
+    fn get_cards(&mut self) {
         self.player1.set_cards(self.cstack.pop());
     }
 

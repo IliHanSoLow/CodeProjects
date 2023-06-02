@@ -1,0 +1,2 @@
+https://fireship.io/lessons/learn-go-in-100-lines/
+https://devhints.io/go

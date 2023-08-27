@@ -1,0 +1,4 @@
+(lang dune 3.6)
+(name TCP_receiver)
+(sections (lib .) (bin ../../bin))
+(files (lib (META dune-package opam)) (bin (TCP_receiver.exe)))

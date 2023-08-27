@@ -1,0 +1,4 @@
+(executable
+ (public_name TCP_receiver)
+ (name main)
+ (libraries TCP_receiver))

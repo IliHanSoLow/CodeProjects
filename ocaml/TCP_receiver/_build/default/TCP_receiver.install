@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/TCP_receiver/META"
+  "_build/install/default/lib/TCP_receiver/dune-package"
+  "_build/install/default/lib/TCP_receiver/opam"
+]
+bin: [
+  "_build/install/default/bin/TCP_receiver.exe"
+]
